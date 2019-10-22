@@ -86,3 +86,13 @@ plt.scatter(df_norm[3], probability_test_df[1])
 plt.scatter(df_norm[4],probability_test_df[1])
 plt.scatter(df_norm[5],probability_test_df[1])
 plt.scatter(df_norm[6],probability_test_df[1])
+
+
+def log_odds(p):
+    return np.log(p / (1 - p))
+
+log_odds_prob = log_odds(probability_test_df[1])
+
+plt.plot(df_norm[0], log_odds)
+
+
